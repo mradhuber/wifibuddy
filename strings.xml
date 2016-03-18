@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Harris Wifi Buddy</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">Wi-Fi Buddy</string>
+    <string name="net_name_1">Network 1</string>
+    <string name="net_name_2">Network 2</string>
+    <string name="configure">Configure</string>
+    <string name="settings">Settings</string>
+    <string name="map">Map Display</string>
+    <string name="batt_level">Battery Level:</string>
+    <string name="connected">Connected:</string>
+    <string name="netpass">Change Network Password</string>
+    <string name="netname">Change Network Name</string>
+    <string name="resetrepeater">Reset Repeater</string>
+    <string name="harris">Harris</string>
+    <string name="title_activity_settings">settings</string>
+    <string name="change_net_name">Change Network Name</string>
+    <string name="change_net_password">Change Network Password</string>
+    <string name="network_map">Network Map</string>
+    <string name="reset_repeater">Reset Repeater</string>
+    <string name="about">About</string>
+    <string name="back_from_settings">Back</string>
+</resources>
