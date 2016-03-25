@@ -12,54 +12,30 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+        private static Button main_to_settings;
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+            onClickSettingsButtonListener();
 
-        // begin button handling
-        Button net1 = (Button)findViewById(R.id.change_net_name);
-        Button net2 = (Button)findViewById(R.id.net2);
-        Button config = (Button)findViewById(R.id.config);
-        Button settings = (Button)findViewById(R.id.settings);
-        Button map = (Button)findViewById(R.id.map);
+    }
 
-        net1.setOnClickListener(
-                new Button.OnClickListener(){
+    public void onClickSettingsButtonListener() {
+
+        main_to_settings = (Button)findViewById(R.id.settings);
+        main_to_settings.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
                     public void onClick(View v) {
-                        TextView conn_status = (TextView)findViewById(R.id.conn_status);
-                        conn_status.setText("SUCCESS!");
+                        Intent intent = new Intent("com.harris.harriswifibuddy.settings");
+                        startActivity(intent);
                     }
                 }
         );
 
-        net2.setOnClickListener(
-                new Button.OnClickListener(){
-                    public void onClick(View v) {
-                        TextView conn_status = (TextView)findViewById(R.id.conn_status);
-                        conn_status.setText("FAILURE!");
-                    }
-                }
-        );
-
-
-        config.setOnClickListener(
-                new Button.OnClickListener(){
-                    public void onClick(View v) {
-                        // navigate to desired page/interface
-                    }
-                }
-        );
-
-        map.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        // navigate to desired page/interface
-                    }
-                }
-        );
     }
 
     @Override
@@ -84,17 +60,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    // back button returns from settings activity to main activity
-    public void onSettingsBackClick(View view) {
-
-        Intent getMainActivityFromSettings = new Intent(this,
-                settings.class);
-
-        final int result = 1;
-
-        getMainActivityFromSettings.putExtra("callingMainActivity", "MainActivity");
-
-        startActivity(getMainActivityFromSettings);
-
-    }
 }
