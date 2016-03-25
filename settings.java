@@ -1,40 +1,50 @@
 package com.harris.harriswifibuddy;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class settings extends AppCompatActivity {
 
+    private static Button settings_to_main, settings_to_about;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        Intent activityThatCalled = getIntent();
-        String previousActivity = activityThatCalled.getExtras().getString("calling activity");
+        // button click methods
+        onClickSettings_to_MainButtonListener();
+        onClickSettings_to_AboutButtonListener();
     }
 
-    Button back_from_settings = (Button)findViewById(R.id.back_from_settings);
+    public void onClickSettings_to_MainButtonListener() {
 
-    // settings button that launches settings activity from main
-    public void onIntoSettingsClick(View view) {
-
-        Intent getSettingsActivityFromMain = new Intent(this,
-                MainActivity.class);
-
-        final int result = 1;
-
-        getSettingsActivityFromMain.putExtra("callingSettingsActivity", "settings");
-
-        startActivity(getSettingsActivityFromMain);
+        settings_to_main = (Button)findViewById(R.id.settings_to_main);
+        settings_to_main.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.harris.wi_fibuddy.HomeScreen");
+                        startActivity(intent);
+                    }
+                }
+        );
 
     }
 
+    public void onClickSettings_to_AboutButtonListener() {
+
+        settings_to_about = (Button)findViewById(R.id.about);
+        settings_to_about.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.harris.harriswifibuddy.about");
+                        startActivity(intent);
+                    }
+                }
+        );
+
+    }
 }
