@@ -9,15 +9,14 @@
     <string name="map">Map Display</string>
     <string name="batt_level">Battery Level:</string>
     <string name="connected">Connected:</string>
-    <string name="netpass">Change Network Password</string>
-    <string name="netname">Change Network Name</string>
-    <string name="resetrepeater">Reset Repeater</string>
     <string name="harris">Harris</string>
-    <string name="title_activity_settings">settings</string>
     <string name="change_net_name">Change Network Name</string>
+    <string name="settings_to_main">Back</string>
     <string name="change_net_password">Change Network Password</string>
-    <string name="network_map">Network Map</string>
-    <string name="reset_repeater">Reset Repeater</string>
+    <string name="reset">Reset repeater</string>
     <string name="about">About</string>
-    <string name="back_from_settings">Back</string>
+    <string name="settings_title">Settings</string>
+    <string name="about_text">GO BLUE!</string>
+    <string name="about_text_title">About</string>
+    <string name="about_to_settings">Back</string>
 </resources>
