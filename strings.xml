@@ -19,4 +19,12 @@
     <string name="about_text">GO BLUE!</string>
     <string name="about_text_title">About</string>
     <string name="about_to_settings">Back</string>
+    <string name="change_network_name">Change Network Name</string>
+    <string name="network_name_OK">OK</string>
+    <string name="back_from_net_name">Cancel</string>
+    <string name="change_net_pword">Change Network Password</string>
+    <string name="change_net_pword_OK">OK</string>
+    <string name="back_from_net_pword">Cancel</string>
+    <string name="network_map_title">Network Map</string>
+    <string name="back_from_map">Back</string>
 </resources>
