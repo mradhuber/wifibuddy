@@ -37,6 +37,27 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".change_net_name">
+            <intent-filter>
+                <action android:name="com.harris.harriswifibuddy.change_net_name" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".change_net_password">
+            <intent-filter>
+                <action android:name="com.harris.harriswifibuddy.change_net_password" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".map">
+            <intent-filter>
+                <action android:name="com.harris.harriswifibuddy.map" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
