@@ -21,31 +21,36 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="82dp"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textIsSelectable="false"
+        android:textSize="34dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/net_name_1"
-        android:id="@+id/change_net_name"
-        android:layout_marginTop="34dp"
+        android:id="@+id/nname1"
+        android:clickable="true"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:background="#d81818"
         android:layout_below="@+id/textView"
         android:layout_alignLeft="@+id/net2"
         android:layout_alignStart="@+id/net2"
-        android:backgroundTint="#d81818"
-        android:clickable="true"
-        android:textColor="#ffffff" />
+        android:layout_marginTop="60dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/net_name_2"
         android:id="@+id/net2"
-        android:layout_below="@+id/change_net_name"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="#d81818"
         android:clickable="true"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:background="#d81818"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,7 +61,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textColor="#d81818"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="40dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -83,37 +89,39 @@
         android:layout_height="wrap_content"
         android:text="@string/configure"
         android:id="@+id/config"
-        android:layout_marginTop="92dp"
-        android:layout_below="@+id/net2"
+        android:clickable="true"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:background="#d81818"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:backgroundTint="#d81818"
-        android:clickable="true"
-        android:textColor="#ffffff" />
+        android:layout_marginBottom="79dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/settings"
         android:id="@+id/settings"
-        android:layout_alignBaseline="@+id/config"
-        android:layout_alignBottom="@+id/config"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="#d81818"
         android:clickable="true"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        android:background="#d81818"
+        android:layout_alignTop="@+id/config"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/map"
+        android:text="Map"
         android:id="@+id/map"
-        android:layout_alignTop="@+id/settings"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:backgroundTint="#d81818"
         android:clickable="true"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        android:background="#d81818"
+        android:layout_alignTop="@+id/settings"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
 
