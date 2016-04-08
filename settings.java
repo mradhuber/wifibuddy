@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class settings extends AppCompatActivity {
 
-    private static Button settings_to_main, settings_to_about;
+    private static Button settings_to_main, settings_to_about, change_net_name, password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +16,8 @@ public class settings extends AppCompatActivity {
         // button click methods
         onClickSettings_to_MainButtonListener();
         onClickSettings_to_AboutButtonListener();
+        onClickSettings_to_NetNameButtonListener();
+        onClickSettings_to_NetPwordButtonListener();
     }
 
     public void onClickSettings_to_MainButtonListener() {
@@ -41,6 +43,36 @@ public class settings extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent("com.harris.harriswifibuddy.about");
+                        startActivity(intent);
+                    }
+                }
+        );
+
+    }
+
+    public void onClickSettings_to_NetNameButtonListener() {
+
+        change_net_name = (Button)findViewById(R.id.change_net_name);
+        change_net_name.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.harris.harriswifibuddy.change_net_name");
+                        startActivity(intent);
+                    }
+                }
+        );
+
+    }
+
+    public void onClickSettings_to_NetPwordButtonListener() {
+
+        password = (Button)findViewById(R.id.change_net_password);
+        password.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.harris.harriswifibuddy.change_net_password");
                         startActivity(intent);
                     }
                 }
