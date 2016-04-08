@@ -8,11 +8,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-        private static Button main_to_settings;
+        private static Button main_to_settings, map;
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
             onClickSettingsButtonListener();
+            onClickMapButtonListener();
 
     }
 
@@ -31,6 +31,21 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent("com.harris.harriswifibuddy.settings");
+                        startActivity(intent);
+                    }
+                }
+        );
+
+    }
+
+    public void onClickMapButtonListener() {
+
+        map = (Button)findViewById(R.id.map);
+        map.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent("com.harris.harriswifibuddy.map");
                         startActivity(intent);
                     }
                 }
